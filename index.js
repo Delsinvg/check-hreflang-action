@@ -9,8 +9,9 @@ try {
     .get(siteUrl)
     .then(function (response) {
       let hreflang = response.data.match(
-        /<link rel="alternate" ([^<]+)>/
+        /<link rel="alternate">/
       );
+
 
       console.log(hreflang)
 
