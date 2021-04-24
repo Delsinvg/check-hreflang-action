@@ -1,0 +1,13 @@
+name: 'Check hreflang tag'
+description: 'This action checks whether a multilingual website has a hreflang tag.'
+inputs:
+  site:  # id of input
+    description: 'url of the site to check'
+    required: true
+    default: 'https://codedor.be'
+outputs:
+  hreflang: # id of output
+    description: 'Returns whether a hreflang tag is present'
+runs:
+  using: 'node12'
+  main: 'index.js'

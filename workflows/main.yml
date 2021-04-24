@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  check_hreflang_job:
+    runs-on: ubuntu-latest
+    name: A job to check the hreflang tag
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: check hreflang action step
+        uses: ./ # Uses an action in the root directory
+        id: check
+        with:
+          site: 'https://codedor.be'
+      # Use the output from the `check` step
+      - name: Get the hreflang url
+        run: echo "The website is available on ${{ steps.check.outputs.hreflang }}"
