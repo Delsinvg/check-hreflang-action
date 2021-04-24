@@ -9,15 +9,15 @@ try {
     .get(siteUrl)
     .then(function (response) {
       let hreflang = response.data.match(
-        /<link rel="alternate">/
+        /<link rel="alternate" [^>]+href="([^")]*)" [^>]+hreflang="([^")]*)"/
       );
 
 
       console.log(hreflang)
 
-      if (! hreflang) {
-        core.setFailed("No hreflang tag on page");
-      }
+    //   if (! hreflang) {
+    //     core.setFailed("No hreflang tag on page");
+    //   }
 
     //   if (favicon) {
     //     let faviconUrl = getHref(favicon[0])
