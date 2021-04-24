@@ -8,8 +8,8 @@ try {
     axios
     .get(siteUrl)
     .then(function (response) {
-      let hreflang = response.data.match(
-        /<link rel="alternate" ^(?=[\S\s]{10,8000})[\S\s]*$>/
+      let hreflang = response.data.matches(
+        /<link rel="alternate" ([^<]+)>/
       );
 
       console.log(hreflang)
