@@ -8,7 +8,7 @@ try {
     axios
     .get(siteUrl)
     .then(function (response) {
-      let hreflang = response.data.RegExp(
+      let hreflang = response.data.search(
         regex
       );
 
