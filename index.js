@@ -8,7 +8,7 @@ try {
     axios
     .get(siteUrl)
     .then(function (response) {
-      let hreflang = response.data.matches(
+      let hreflang = response.data.match(
         /<link rel="alternate" ([^<]+)>/
       );
 
