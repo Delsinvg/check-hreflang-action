@@ -14,7 +14,7 @@ try {
 
       console.log(hreflang)
 
-      if (! favicon) {
+      if (! hreflang) {
         core.setFailed("No hreflang tag on page");
       }
 
