@@ -18,7 +18,6 @@ try {
       if (hreflang) {
         let hreflangUrls = [];
         for (let i = 0; i < hreflang.length; i++) {
-          console.log(hreflang[i]);
           hreflangUrls.push(getHref(hreflang[i]));
         }
         core.setOutput("hreflang", hreflangUrls);
