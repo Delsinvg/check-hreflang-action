@@ -9,7 +9,7 @@ try {
     .get(siteUrl)
     .then(function (response) {
       let hreflang = response.data.match(
-        regex
+        regex, g
       );
 
 
