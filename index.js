@@ -4,12 +4,12 @@ const axios = require("axios").default;
 
 try {
     const siteUrl = core.getInput("site");
-    let regex = /<link rel="alternate" href="([^")]*)"/
+    let regex = /<link rel="alternate" href="([^")]*)"/g
     axios
     .get(siteUrl)
     .then(function (response) {
       let hreflang = response.data.match(
-        regex, g
+        regex
       );
 
 
