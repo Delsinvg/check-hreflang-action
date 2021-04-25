@@ -4,7 +4,7 @@ const axios = require("axios").default;
 
 try {
     const siteUrl = core.getInput("site");
-    let regex = /<link rel="alternate" [^>]+href="([^")]*)"/
+    let regex = /<link rel="alternate" href="([^")]*)"/
     axios
     .get(siteUrl)
     .then(function (response) {
