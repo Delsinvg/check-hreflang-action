@@ -13,7 +13,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: check
         with:
-          site: 'https://www.mediamarkt.be'
+          site: 'https://www.mediamarkt.be/'
       # Use the output from the `check` step
       - name: Get the hreflang url
         run: echo "The website is available on ${{ steps.check.outputs.hreflang }}"
